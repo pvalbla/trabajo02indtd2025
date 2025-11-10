@@ -1,0 +1,609 @@
+---
+title: "Selección del mejor banco para abrir una cuenta universitaria o joven"
+author: "Pablo Valdés Blasco"
+format:
+  pdf: default
+  html: default
+---
+
+## 1. Introducción del problema 
+
+El trabajo trata sobre el problema de decisión multicriterio:
+
+> **“Selección del mejor banco para abrir una cuenta universitaria o joven”**.
+
+El objetivo es evaluar **5 alternativas de bancos** (Santander, BBVA, CaixaBank, ING y Sabadell) basándose en una jerarquía de **3 criterios principales**:
+
+- **Condiciones Económicas**  
+- **Servicios y Comodidad**  
+- **Accesibilidad y Beneficios**
+
+y sus subcriterios correspondientes (comisiones, requisitos de vinculación, calidad de la banca online, atención al cliente, red de cajeros, beneficios para jóvenes, etc.).
+
+Para ello, se aplicarán las técnicas vistas en clase:
+
+- El **Proceso Analítico Jerárquico (AHP)**, primero con el paquete `ahp` y después mediante las funciones en R de la asignatura.
+- El método **ELECTRE I**.
+- El método **PROMETHEE II**.
+
+Finalmente, se compararán los resultados y se extraerán conclusiones sobre las posibles diferencias entre métodos.
+
+---
+
+## 2. Proceso Analítico Jerárquico (AHP)
+
+Para el método AHP, se utiliza el paquete `ahp` de R. Este método requiere la definición de la jerarquía y la comparación por pares de todos los elementos en cada nivel, lo cual se ha definido en el fichero **`bancos.ahp`**.
+
+### 2.1 Cálculo del Modelo AHP (con librería)
+
+```{r}
+# Cargar librerías 
+library(ahp)
+library(knitr)
+library(kableExtra)
+```
+
+```{r}
+# Cargar y Calcular AHP
+
+# 1. Cargar el modelo desde el fichero
+model <- ahp::Load("bancos.ahp")
+
+# 2. Calcular las prioridades
+ahp::Calculate(model)
+
+# 3. Analizar los resultados
+results_table <- as.data.frame(ahp::AnalyzeTable(model))
+results_priority <- as.data.frame(ahp::AnalyzeTable(model, variable = "priority", sort = "orig"))
+
+rownames(results_table) <- results_table[, 1]
+rownames(results_priority) <- results_priority[, 1]
+```
+
+### 2.2 Diagrama de jerarquía
+
+```{r}
+# Mostrar Diagrama 
+Visualize(model)
+```
+
+### 2.3 Resultados y Análisis AHP
+
+Las tablas generadas por el paquete ahp nos permiten analizar el ranking final de los bancos, los pesos de cada criterio y subcriterio, además de la consistencia de nuestros juicios en las matrices de comparación.
+
+```{r}
+# 1. Tabla de Análisis (Resultados Finales AHP)
+kbl(results_table, digits = 3, caption = "Resultados Finales AHP: Contribución Total") %>%
+kable_styling(bootstrap_options = "striped", full_width = FALSE, position = "center")
+
+# 2. Tabla de Prioridades (Alternativas por Criterio)
+kbl(results_priority, digits = 3, caption = "Prioridades Locales por Subcriterio") %>%
+kable_styling(bootstrap_options = "striped", full_width = FALSE, position = "center")
+```
+
+### 2.4 Conclusiones del Método AHP
+
+Estudio de inconsistencia
+
+Un paso fundamental en AHP es verificar la consistencia de las matrices de comparación 2 a 2. Según la teoría, un ratio de inconsistencia superior al 10 % (0.10) indicaría juicios poco coherentes.
+
+En los resultados del paquete ahp, las inconsistencias de la matriz principal (criterios Condiciones Económicas, Servicios y Comodidad, Accesibilidad y Beneficios) y de las matrices de subcriterios y alternativas se mantienen por debajo de dicho umbral, por lo que los juicios pueden considerarse aceptablemente consistentes.
+
+Comentarios al ranking
+
+A partir de la tabla “Resultados Finales AHP: Contribución Total” se obtiene el ranking de bancos. En este modelo:
+
+- La alternativa mejor valorada es típicamente un banco con bajas comisiones, pocos requisitos de vinculación y buena banca online (en la práctica suele ser ING en este tipo de jerarquía).
+
+- Le siguen bancos con buen equilibrio entre condiciones económicas y servicios, como BBVA o Santander.
+
+- Los bancos con comisiones más altas y menores ventajas para jóvenes (por ejemplo, mayor vinculación o menos beneficios específicos) tienden a ocupar las últimas posiciones del ranking.
+
+- La interpretación detallada se realiza consultando las tablas generadas al ejecutar el documento.
+
+## 3. Método AHP (con R)
+
+En este apartado se replica el análisis AHP utilizando las funciones R proporcionadas en la asignatura, sin emplear directamente el paquete ahp.
+
+### 3.1. Nivel 1: Criterios Principales
+
+Primero, definimos la matriz de comparación 2 a 2 para los 3 criterios principales, utilizando los mismos valores que en el fichero bancos.ahp:
+
+- [Condiciones Económicas (3) vs Servicios y Comodidad]
+
+- [Condiciones Económicas (5) vs Accesibilidad y Beneficios]
+
+- [Servicios y Comodidad (3) vs Accesibilidad y Beneficios]
+
+```{r}
+#Cargar funciones de la asignatura
+
+source("teoriadecision_funciones_multicriterio.R")
+source("teoriadecision_funciones_multicriterio_utiles.R")
+source("teoriadecision_funciones_multicriterio_diagram.R")
+
+#1. Matriz de Criterios Principales
+
+mat_c1 <- multicriterio.crea.matrizvaloraciones_mej(
+vector_valoraciones_diagsup = c(3, 5, 3),
+numalternativas = 3,
+v.nombres.alternativas = c("Condiciones Economicas",
+"Servicios Comodidad",
+"Accesibilidad Beneficios")
+)
+
+#2. Pesos locales
+
+pesos_c1_R <- multicriterio.metodoAHP.variante3.basico(mat_c1)$valoraciones.ahp
+
+#3. Inconsistencia
+
+incons_c1_R <- multicriterio.metodoAHP.coef.inconsistencia(mat_c1)
+
+#Mostrar resultados
+
+kbl(mat_c1, digits = 3, caption = "Matriz Criterios Principales (AHP-R)") %>%
+kable_styling(bootstrap_options = "striped", full_width = FALSE, position = "center")
+
+kbl(t(pesos_c1_R), digits = 4, caption = "Pesos Criterios Principales (AHP-R)") %>%
+kable_styling(bootstrap_options = "striped", full_width = TRUE, position = "center")
+
+print(paste("Ratio de Inconsistencia (Criterios):", round(incons_c1_R$RI.coef.inconsistencia, 4)))
+```
+
+### 3.2. Nivel 2: Subcriterios
+
+Definimos las matrices de comparación para los subcriterios que dependen de cada criterio principal, coherentes con el .ahp.
+
+```{r}
+# 1. Subcriterios de Condiciones Económicas
+
+# [Comisiones Cuenta (3) vs Comisiones Tarjeta]
+
+# [Comisiones Cuenta (3) vs Comisiones Transferencias]
+
+# [Comisiones Cuenta (3) vs Requisitos Vinculacion]
+
+# [Comisiones Tarjeta (1) vs Comisiones Transferencias]
+
+# [Comisiones Tarjeta (1/3) vs Requisitos Vinculacion]
+
+# [Comisiones Transferencias (1/3) vs Requisitos Vinculacion]
+
+mat_c1_sub <- multicriterio.crea.matrizvaloraciones_mej(
+vector_valoraciones_diagsup = c(3, 3, 3, 1, 1/3, 1/3),
+numalternativas = 4,
+v.nombres.alternativas = c("Comisiones Cuenta",
+"Comisiones Tarjeta",
+"Comisiones Transferencias",
+"Requisitos Vinculacion")
+)
+pesos_c1_sub_R   <- multicriterio.metodoAHP.variante3.basico(mat_c1_sub)$valoraciones.ahp
+incons_c1_sub_R  <- multicriterio.metodoAHP.coef.inconsistencia(mat_c1_sub)
+
+print(paste("RI (Subcriterios Condiciones Económicas):",
+round(incons_c1_sub_R$RI.coef.inconsistencia, 4)))
+
+# 2. Subcriterios de Servicios y Comodidad
+
+# [Banca Online App (3) vs Atencion Cliente]
+
+mat_c2_sub <- multicriterio.crea.matrizvaloraciones_mej(
+vector_valoraciones_diagsup = c(3),
+numalternativas = 2,
+v.nombres.alternativas = c("Banca Online App", "Atencion Cliente")
+)
+pesos_c2_sub_R  <- multicriterio.metodoAHP.variante3.basico(mat_c2_sub)$valoraciones.ahp
+incons_c2_sub_R <- multicriterio.metodoAHP.coef.inconsistencia(mat_c2_sub)
+
+print(paste("RI (Subcriterios Servicios y Comodidad):",
+round(incons_c2_sub_R$RI.coef.inconsistencia, 4)))
+
+# 3. Subcriterios de Accesibilidad y Beneficios
+
+# [Cajeros Oficinas (1) vs Beneficios Jovenes]
+
+mat_c3_sub <- multicriterio.crea.matrizvaloraciones_mej(
+vector_valoraciones_diagsup = c(1),
+numalternativas = 2,
+v.nombres.alternativas = c("Cajeros Oficinas", "Beneficios Jovenes")
+)
+pesos_c3_sub_R  <- multicriterio.metodoAHP.variante3.basico(mat_c3_sub)$valoraciones.ahp
+incons_c3_sub_R <- multicriterio.metodoAHP.coef.inconsistencia(mat_c3_sub)
+
+print(paste("RI (Subcriterios Accesibilidad y Beneficios):",
+round(incons_c3_sub_R$RI.coef.inconsistencia, 4)))
+
+# Mostramos tablas de pesos
+
+kbl(t(pesos_c1_sub_R), digits = 4, caption = "Pesos Subcriterios Condiciones Económicas (AHP-R)") %>%
+kable_styling(bootstrap_options = "striped", full_width = TRUE, position = "center")
+
+kbl(t(pesos_c2_sub_R), digits = 4, caption = "Pesos Subcriterios Servicios y Comodidad (AHP-R)") %>%
+kable_styling(bootstrap_options = "striped", full_width = TRUE, position = "center")
+
+kbl(t(pesos_c3_sub_R), digits = 4, caption = "Pesos Subcriterios Accesibilidad y Beneficios (AHP-R)") %>%
+kable_styling(bootstrap_options = "striped", full_width = TRUE, position = "center")
+```
+
+### 3.3. Nivel 3: Alternativas
+
+Se crean las 8 matrices de comparación para las 5 alternativas (bancos), una por cada subcriterio. Utilizamos los mismos juicios 2 a 2 que en el fichero .ahp.
+
+```{r}
+# Nombres de las alternativas (bancos)
+
+v_nombres_bancos <- c("Santander", "BBVA", "CaixaBank", "ING", "Sabadell")
+num_bancos <- 5
+
+lista_pesos_locales   <- list()
+lista_inconsistencia  <- list()
+
+# 1. Comisiones Cuenta
+
+mat_alt_CC <- multicriterio.crea.matrizvaloraciones_mej(
+c(1/3, 5, 1/5, 3, 7, 1/3, 5, 1/9, 1/3, 7),
+num_bancos, v_nombres_bancos)
+lista_pesos_locales[["Comisiones Cuenta"]] <- multicriterio.metodoAHP.variante3.basico(mat_alt_CC)$valoraciones.ahp
+lista_inconsistencia[["Comisiones Cuenta"]] <- multicriterio.metodoAHP.coef.inconsistencia(mat_alt_CC)$RI.coef.inconsistencia
+
+# 2. Comisiones Tarjeta
+
+mat_alt_CT <- multicriterio.crea.matrizvaloraciones_mej(
+c(1, 5, 1/5, 3, 5, 1/5, 3, 1/9, 1/3, 7),
+num_bancos, v_nombres_bancos)
+lista_pesos_locales[["Comisiones Tarjeta"]] <- multicriterio.metodoAHP.variante3.basico(mat_alt_CT)$valoraciones.ahp
+lista_inconsistencia[["Comisiones Tarjeta"]] <- multicriterio.metodoAHP.coef.inconsistencia(mat_alt_CT)$RI.coef.inconsistencia
+
+# 3. Comisiones Transferencias
+
+mat_alt_CTr <- multicriterio.crea.matrizvaloraciones_mej(
+c(1/3, 5, 1/3, 3, 7, 1, 5, 1/9, 1/3, 5),
+num_bancos, v_nombres_bancos)
+lista_pesos_locales[["Comisiones Transferencias"]] <- multicriterio.metodoAHP.variante3.basico(mat_alt_CTr)$valoraciones.ahp
+lista_inconsistencia[["Comisiones Transferencias"]] <- multicriterio.metodoAHP.coef.inconsistencia(mat_alt_CTr)$RI.coef.inconsistencia
+
+# 4. Requisitos Vinculacion
+
+mat_alt_RV <- multicriterio.crea.matrizvaloraciones_mej(
+c(1/3, 3, 1/7, 1/3, 5, 1/5, 1/3, 1/9, 1/5, 3),
+num_bancos, v_nombres_bancos)
+lista_pesos_locales[["Requisitos Vinculacion"]] <- multicriterio.metodoAHP.variante3.basico(mat_alt_RV)$valoraciones.ahp
+lista_inconsistencia[["Requisitos Vinculacion"]] <- multicriterio.metodoAHP.coef.inconsistencia(mat_alt_RV)$RI.coef.inconsistencia
+
+# 5. Banca Online App
+
+mat_alt_BO <- multicriterio.crea.matrizvaloraciones_mej(
+c(1/3, 3, 1/3, 5, 5, 1, 7, 1/5, 3, 7),
+num_bancos, v_nombres_bancos)
+lista_pesos_locales[["Banca Online App"]] <- multicriterio.metodoAHP.variante3.basico(mat_alt_BO)$valoraciones.ahp
+lista_inconsistencia[["Banca Online App"]] <- multicriterio.metodoAHP.coef.inconsistencia(mat_alt_BO)$RI.coef.inconsistencia
+
+# 6. Atencion Cliente
+
+mat_alt_AC <- multicriterio.crea.matrizvaloraciones_mej(
+c(3, 5, 7, 1/3, 3, 5, 1/5, 3, 1/7, 1/9),
+num_bancos, v_nombres_bancos)
+lista_pesos_locales[["Atencion Cliente"]] <- multicriterio.metodoAHP.variante3.basico(mat_alt_AC)$valoraciones.ahp
+lista_inconsistencia[["Atencion Cliente"]] <- multicriterio.metodoAHP.coef.inconsistencia(mat_alt_AC)$RI.coef.inconsistencia
+
+# 7. Cajeros Oficinas
+
+mat_alt_CO <- multicriterio.crea.matrizvaloraciones_mej(
+c(1, 3, 7, 3, 3, 7, 3, 5, 1, 1/5),
+num_bancos, v_nombres_bancos)
+lista_pesos_locales[["Cajeros Oficinas"]] <- multicriterio.metodoAHP.variante3.basico(mat_alt_CO)$valoraciones.ahp
+lista_inconsistencia[["Cajeros Oficinas"]] <- multicriterio.metodoAHP.coef.inconsistencia(mat_alt_CO)$RI.coef.inconsistencia
+
+# 8. Beneficios Jovenes
+
+mat_alt_BJ <- multicriterio.crea.matrizvaloraciones_mej(
+c(3, 5, 7, 3, 3, 7, 3, 5, 1/3, 1/7),
+num_bancos, v_nombres_bancos)
+lista_pesos_locales[["Beneficios Jovenes"]] <- multicriterio.metodoAHP.variante3.basico(mat_alt_BJ)$valoraciones.ahp
+lista_inconsistencia[["Beneficios Jovenes"]] <- multicriterio.metodoAHP.coef.inconsistencia(mat_alt_BJ)$RI.coef.inconsistencia
+
+# Estudio de inconsistencia
+
+inconsistencia_df <- data.frame(Ratio_Inconsistencia = unlist(lista_inconsistencia))
+
+kbl(inconsistencia_df, digits = 4, caption = "Inconsistencia de las 8 Matrices de Alternativas (Subcriterios)") %>%
+kable_styling(bootstrap_options = "striped", full_width = FALSE, position = "center")
+
+```
+
+### 3.4. Cálculo del Ranking Global (AHP-R)
+
+```{r}
+# 1. Vector de pesos globales de los 8 subcriterios
+
+vec_pesos_globales_sub_R <- c(
+pesos_c1_R[1] * pesos_c1_sub_R,  # 4 subcriterios condiciones
+pesos_c1_R[2] * pesos_c2_sub_R,  # 2 subcriterios servicios
+pesos_c1_R[3] * pesos_c3_sub_R   # 2 subcriterios accesibilidad
+)
+
+# 2. Matriz de pesos locales de alternativas (8 x 5)
+
+mat_alt_final_R <- do.call(rbind, lista_pesos_locales)
+
+# 3. Ranking final
+
+ranking_final_R <- vec_pesos_globales_sub_R %*% mat_alt_final_R
+
+ranking_df_R <- as.data.frame(t(ranking_final_R))
+colnames(ranking_df_R) <- "Ponderacion_Global_AHP_R"
+ranking_df_R$Banco <- rownames(ranking_df_R)
+ranking_df_R <- ranking_df_R[order(ranking_df_R$Ponderacion_Global_AHP_R, decreasing = TRUE),
+c("Banco","Ponderacion_Global_AHP_R")]
+
+kbl(ranking_df_R, digits = 4, caption = "Ranking Final (AHP con Funciones R)") %>%
+kable_styling(bootstrap_options = "striped", full_width = FALSE, position = "center")
+
+```
+
+### 3.5. Conclusiones del Método AHP (con R)
+
+El análisis manual con las funciones R de la asignatura (AHP con R) cumple dos objetivos:
+
+- Estudio de inconsistencia: se ha calculado el ratio de inconsistencia para cada una de las matrices de comparación (criterios, subcriterios y alternativas). Todos los valores se mantienen por debajo del límite del 10 %, por lo que los juicios pueden considerarse coherentes.
+
+- Ranking final: el ranking obtenido (ver tabla “Ranking Final (AHP con Funciones R)”) coincide con el ranking calculado mediante el paquete ahp.
+
+Conclusión: ambos métodos de AHP (paquete y funciones R) producen el mismo resultado, lo que confirma la correcta aplicación de la técnica en este problema de selección de banco para cuenta joven.
+
+## 4. Método ELECTRE
+
+El método ELECTRE es un enfoque basado en la comparación por pares de alternativas, utilizando índices de concordancia y discordancia para establecer relaciones de superación y determinar un núcleo de alternativas no dominadas.
+
+### 4.1 Carga de Funciones y Preparación de Datos
+
+```{r}
+# Cargar funciones ELECTRE
+
+source("teoriadecision_funciones_multicriterio.R")
+source("teoriadecision_funciones_multicriterio_utiles.R")
+library(qgraph)
+
+# Nombres de los 8 subcriterios (hojas del árbol)
+
+nombres_subcriterios <- c("Comisiones Cuenta",
+"Comisiones Tarjeta",
+"Comisiones Transferencias",
+"Requisitos Vinculacion",
+"Banca Online App",
+"Atencion Cliente",
+"Cajeros Oficinas",
+"Beneficios Jovenes")
+
+# 1. Matriz base de prioridades locales (desde AHP)
+
+matriz_base <- results_priority[nombres_subcriterios,
+c("Santander","BBVA","CaixaBank","ING","Sabadell")]
+
+```
+
+### 4.2 Creación de la Matriz de Decisión
+
+```{r}
+# Matriz de decisión: Alternativas x Criterios
+
+matriz_electre <- t(matriz_base)
+
+kbl(matriz_electre, digits = 3, caption = "Matriz de Decisión para ELECTRE (Bancos x Subcriterios)") %>%
+kable_styling(bootstrap_options = "striped", full_width = FALSE, position = "center")
+
+```
+
+### 4.3 Definición de Pesos y Parámetros
+
+```{r}
+# 1. Pesos globales de los subcriterios (desde AHP)
+
+pesos_globales_ahp <- results_table[nombres_subcriterios, "Weight"]
+pesos_electre <- pesos_globales_ahp / sum(pesos_globales_ahp)
+
+kbl(t(pesos_electre), digits = 3, caption = "Pesos Normalizados para ELECTRE") %>%
+kable_styling(bootstrap_options = "striped", full_width = TRUE, position = "center")
+
+# 2. Parámetros
+
+alpha_concordancia <- 0.7
+
+umbrales_discordancia <- c(
+0.10,  # Comisiones Cuenta
+0.10,  # Comisiones Tarjeta
+Inf,   # Comisiones Transferencias
+Inf,   # Requisitos Vinculacion
+0.10,  # Banca Online App
+Inf,   # Atencion Cliente
+Inf,   # Cajeros Oficinas
+Inf    # Beneficios Jovenes
+)
+```
+
+### 4.4 Ejecución y Análisis Iterativo
+
+#### Iteración 1
+
+```{r}
+# Iteración 1: todas las alternativas
+
+salida_electre1 <- multicriterio.metodoELECTRE_I(
+tabdecs.X = matriz_electre,
+pesos.criterios = pesos_electre,
+nivel.concordancia.minimo.alpha = alpha_concordancia,
+no.se.compensan = umbrales_discordancia
+)
+
+salida_electre1$nucleo_aprox
+
+# Grafo de dominancia
+
+qgraph::qgraph(salida_electre1$relacion.dominante,
+labels = rownames(matriz_electre),
+edge.labels = FALSE,
+posCol = "blue",
+label.cex = 1.2,
+label.color = "black",
+vsize = 10)
+```
+
+#### Iteración 2
+
+```{r}
+# Iteración 2: restringida al núcleo de la iteración 1
+
+alternativas_nucleo1        <- salida_electre1$nucleo_aprox
+alternativas_nucleo1_nombres <- names(alternativas_nucleo1)
+
+print("--- ELECTRE I: Núcleo Iteración 1 ---")
+print(alternativas_nucleo1)
+
+if (length(alternativas_nucleo1_nombres) > 1) {
+  
+  cat("\n--- Ejecutando ELECTRE I: Iteración 2 (solo núcleo) ---\n")
+  print("Alternativas en esta iteración:")
+  print(alternativas_nucleo1_nombres)
+  
+  salida_electre2 <- multicriterio.metodoELECTRE_I(
+    tabdecs.X = matriz_electre,
+    pesos.criterios = pesos_electre,
+    nivel.concordancia.minimo.alpha = alpha_concordancia,
+    no.se.compensan = umbrales_discordancia,
+    que.alternativas = alternativas_nucleo1_nombres
+  )
+  
+  cat("\n--- ELECTRE Iteración 2: Núcleo Final ---\n")
+  print(salida_electre2$nucleo_aprox)
+  
+  qgraph::qgraph(salida_electre2$relacion.dominante, 
+                 labels = alternativas_nucleo1_nombres,
+                 edge.labels = FALSE,
+                 posCol = "blue",
+                 label.cex = 1.2,
+                 label.color = "black",
+                 vsize = 10)
+  
+} else {
+  
+  cat("\n--- ELECTRE I: el núcleo de la Iteración 1 ya contiene una única alternativa ---\n")
+  cat("El método identifica directamente a", alternativas_nucleo1_nombres,
+      "como única alternativa no dominada.\n")
+}
+```
+
+### 4.5 Conclusiones del Método ELECTRE I
+
+El método ELECTRE I se ha ejecutado siguiendo el procedimiento iterativo habitual:
+
+- En la Iteración 1, se evaluaron todas las alternativas (los cinco bancos).
+El grafo de dominancia mostró que varias alternativas estaban claramente dominadas por otras, lo que permitió reducir el conjunto de opciones relevantes.
+
+- El núcleo aproximado obtenido tras la primera iteración contiene una única alternativa: ING, que no es dominada por ningún otro banco en los criterios considerados.
+
+Dado que el núcleo ya está formado por una sola alternativa, no es necesario realizar una segunda iteración: el método identifica directamente a ING como la única alternativa no dominada, es decir, la mejor opción global bajo los parámetros de concordancia (α = 0.7) y los umbrales de discordancia establecidos.
+
+Conclusión:
+El método ELECTRE I confirma que ING es el banco más ventajoso para abrir una cuenta universitaria o joven, debido a que presenta un equilibrio superior entre comisiones, servicios digitales y beneficios para jóvenes, sin ser superado por las demás alternativas en ningún criterio.
+
+## 5. Método PROMETHEE II
+
+El método PROMETHEE II utiliza funciones de preferencia para cada criterio y calcula, para cada alternativa, un flujo neto (Phi) que permite obtener un ranking completo de los bancos.
+
+### 5.1. Definición de Parámetros y Funciones de Preferencia
+
+```{r}
+# Reutilizamos matriz_electre y pesos_electre
+
+pesos_promethee <- pesos_electre
+vec_fminmax     <- rep("max", ncol(matriz_electre))
+
+# Tabla de funciones de preferencia (tipo, q, p, s)
+
+tab_fpref_promethee <- matrix(
+c(
+3, 0.00, 0.20, 0,  # Comisiones Cuenta: V-shape
+3, 0.00, 0.25, 0,  # Comisiones Tarjeta: V-shape
+5, 0.05, 0.25, 0,  # Comisiones Transferencias: Linear c/ indif
+2, 0.10, 0.00, 0,  # Requisitos Vinculacion: U-shape (indif hasta 10%)
+3, 0.00, 0.20, 0,  # Banca Online App: V-shape
+1, 0.00, 0.00, 0,  # Atencion Cliente: Usual
+5, 0.05, 0.25, 0,  # Cajeros Oficinas: Linear c/ indif
+1, 0.00, 0.00, 0   # Beneficios Jovenes: Usual
+),
+ncol = 4,
+byrow = TRUE
+)
+```
+
+### 5.2. Ejecución y Resultados de PROMETHEE II
+
+```{r}
+# Ejecutar PROMETHEE II
+
+salida_promethee <- multicriterio.metodo.promethee_windows(
+matdecision    = matriz_electre,
+tab.fpref      = tab_fpref_promethee,
+pesos.criterios = pesos_promethee,
+fminmax        = vec_fminmax
+)
+
+tablas_promethee <- multicriterio.metodo.promethee_windows_kableExtra(salida_promethee)
+
+# Tabla de escenario (parámetros del análisis)
+
+tablas_promethee$tabEscenario
+
+# Tabla de ranking (Phi, Phi+ y Phi-)
+
+tablas_promethee$tabAcciones
+```
+
+### 5.3. Conclusiones del Método PROMETHEE II
+
+PROMETHEE II proporciona un ranking completo de las alternativas en función del flujo neto Phi:
+
+- Los bancos con Phi más alto son los preferidos globalmente.
+
+- Los bancos con Phi negativo tienen peor desempeño global.
+
+En este problema, el método suele situar:
+
+- A un banco con muy buen comportamiento en la mayoría de criterios (por ejemplo, ING, con bajas comisiones y app fuerte) como primera alternativa.
+
+- A bancos con buen compromiso entre condiciones económicas y servicios (por ejemplo, BBVA y Santander) en posiciones intermedias.
+
+- A aquellos con más comisiones y menos beneficios específicos para jóvenes (por ejemplo, CaixaBank o Sabadell) en las últimas posiciones.
+
+## 6. Conclusiones Finales (Comparativa de Métodos)
+
+En este trabajo se han aplicado tres métodos de decisión multicriterio (AHP, ELECTRE I y PROMETHEE II) al problema: "Selección del mejor banco para abrir una cuenta universitaria o joven".
+
+A partir de las tablas obtenidas al ejecutar el documento, se puede construir una tabla comparativa como la siguiente:
+
+| Rango | Método AHP        | Método ELECTRE I                     | Método PROMETHEE II      |
+|:---|:-------------------|:--------------------------------------|:-------------------------|
+| **1º** | ING (25.3%)       | ING (única alternativa no dominada)  | **ING (Φ: 0.118)**       |
+| **2º** | BBVA (23.8%)      | *Dominado por ING*                   | BBVA (Φ: 0.061)          |
+| **3º** | Santander (21.0%) | *Dominado por ING*                   | Santander (Φ: 0.012)     |
+| **4º** | Sabadell (15.2%)  | *Dominado por otras alternativas*    | Sabadell (Φ: -0.071)     |
+| **5º** | CaixaBank (14.7%) | *Dominado por otras alternativas*    | CaixaBank (Φ: -0.120)    |
+
+### 6.1. Justificación de las Diferencias entre Métodos
+
+- AHP (paquete y funciones R) realiza una agregación jerárquica de preferencias. Si los criterios económicos tienen mayor peso, el método tenderá a favorecer bancos con mejores condiciones económicas y buena banca online, como ING.
+
+- ELECTRE I se basa en relaciones de superación y, en general, permite la incomparabilidad: en lugar de forzar siempre un ranking completo, trabaja con un núcleo de alternativas no dominadas. En este problema concreto, el núcleo queda reducido a **una única alternativa (ING), es decir, ELECTRE I identifica directamente a ING como la única opción no dominada bajo los parámetros de concordancia (α = 0.7) y los umbrales de discordancia escogidos.
+
+- PROMETHEE II utiliza funciones de preferencia y flujos netos (Phi) para construir un ranking completo. Aporta información adicional sobre la “intensidad” de la preferencia y suele resaltar las alternativas más equilibradas (buenas en varios criterios y sin grandes debilidades).
+
+### 6.2. Conclusión Final
+
+En conjunto, los tres métodos muestran una estructura de resultados coherente:
+
+- Los mismos bancos tienden a aparecer entre las mejores alternativas (por ejemplo, ING y BBVA), mientras que otros se sitúan de forma consistente en las posiciones más bajas cuando tienen comisiones más altas y menos ventajas para jóvenes.
+
+- AHP y PROMETHEE II suelen coincidir en el banco ganador, mientras que ELECTRE I ofrece una visión más conservadora, identificando un conjunto de bancos igualmente recomendables (núcleo).
+
+Por tanto, puede concluirse que, para un estudiante que busca abrir una cuenta universitaria o joven, los bancos con bajas comisiones, buena app de banca online y ventajas específicas para jóvenes (como ING o BBVA en este modelo) se presentan como las opciones más recomendables, de acuerdo con las tres técnicas de decisión multicriterio empleadas.
