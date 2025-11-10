@@ -1,0 +1,150 @@
+Version: 2.0
+Alternatives: &alternatives
+  Santander:
+  BBVA:
+  CaixaBank:
+  ING:
+  Sabadell:
+
+Goal:
+  name: Seleccion del mejor banco para cuenta universitaria o joven
+  preferences:
+    pairwise:
+      - [Condiciones Economicas, Servicios Comodidad, 3]
+      - [Condiciones Economicas, Accesibilidad Beneficios, 5]
+      - [Servicios Comodidad, Accesibilidad Beneficios, 3]
+  children:
+    Condiciones Economicas:
+      preferences:
+        pairwise:
+          - [Comisiones Cuenta, Comisiones Tarjeta, 3]
+          - [Comisiones Cuenta, Comisiones Transferencias, 3]
+          - [Comisiones Cuenta, Requisitos Vinculacion, 3]
+          - [Comisiones Tarjeta, Comisiones Transferencias, 1]
+          - [Comisiones Tarjeta, Requisitos Vinculacion, 1/3]
+          - [Comisiones Transferencias, Requisitos Vinculacion, 1/3]
+      children:
+        Comisiones Cuenta:
+          preferences:
+            pairwise:
+              - [Santander, BBVA, 1/3]
+              - [Santander, CaixaBank, 5]
+              - [Santander, ING, 1/5]
+              - [Santander, Sabadell, 3]
+              - [BBVA, CaixaBank, 7]
+              - [BBVA, ING, 1/3]
+              - [BBVA, Sabadell, 5]
+              - [CaixaBank, ING, 1/9]
+              - [CaixaBank, Sabadell, 1/3]
+              - [ING, Sabadell, 7]
+          children: *alternatives
+        Comisiones Tarjeta:
+          preferences:
+            pairwise:
+              - [Santander, BBVA, 1]
+              - [Santander, CaixaBank, 5]
+              - [Santander, ING, 1/5]
+              - [Santander, Sabadell, 3]
+              - [BBVA, CaixaBank, 5]
+              - [BBVA, ING, 1/5]
+              - [BBVA, Sabadell, 3]
+              - [CaixaBank, ING, 1/9]
+              - [CaixaBank, Sabadell, 1/3]
+              - [ING, Sabadell, 7]
+          children: *alternatives
+        Comisiones Transferencias:
+          preferences:
+            pairwise:
+              - [Santander, BBVA, 1/3]
+              - [Santander, CaixaBank, 5]
+              - [Santander, ING, 1/3]
+              - [Santander, Sabadell, 3]
+              - [BBVA, CaixaBank, 7]
+              - [BBVA, ING, 1]
+              - [BBVA, Sabadell, 5]
+              - [CaixaBank, ING, 1/9]
+              - [CaixaBank, Sabadell, 1/3]
+              - [ING, Sabadell, 5]
+          children: *alternatives
+        Requisitos Vinculacion:
+          preferences:
+            pairwise:
+              - [Santander, BBVA, 1/3]
+              - [Santander, CaixaBank, 3]
+              - [Santander, ING, 1/7]
+              - [Santander, Sabadell, 1/3]
+              - [BBVA, CaixaBank, 5]
+              - [BBVA, ING, 1/5]
+              - [BBVA, Sabadell, 1/3]
+              - [CaixaBank, ING, 1/9]
+              - [CaixaBank, Sabadell, 1/5]
+              - [ING, Sabadell, 3]
+          children: *alternatives
+
+    Servicios Comodidad:
+      preferences:
+        pairwise:
+          - [Banca Online App, Atencion Cliente, 3]
+      children:
+        Banca Online App:
+          preferences:
+            pairwise:
+              - [Santander, BBVA, 1/3]
+              - [Santander, CaixaBank, 3]
+              - [Santander, ING, 1/3]
+              - [Santander, Sabadell, 5]
+              - [BBVA, CaixaBank, 5]
+              - [BBVA, ING, 1]
+              - [BBVA, Sabadell, 7]
+              - [CaixaBank, ING, 1/5]
+              - [CaixaBank, Sabadell, 3]
+              - [ING, Sabadell, 7]
+          children: *alternatives
+        Atencion Cliente:
+          preferences:
+            pairwise:
+              - [Santander, BBVA, 3]
+              - [Santander, CaixaBank, 5]
+              - [Santander, ING, 7]
+              - [Santander, Sabadell, 1/3]
+              - [BBVA, CaixaBank, 3]
+              - [BBVA, ING, 5]
+              - [BBVA, Sabadell, 1/5]
+              - [CaixaBank, ING, 3]
+              - [CaixaBank, Sabadell, 1/7]
+              - [ING, Sabadell, 1/9]
+          children: *alternatives
+
+    Accesibilidad Beneficios:
+      preferences:
+        pairwise:
+          - [Cajeros Oficinas, Beneficios Jovenes, 1]
+      children:
+        Cajeros Oficinas:
+          preferences:
+            pairwise:
+              - [Santander, BBVA, 1]
+              - [Santander, CaixaBank, 3]
+              - [Santander, ING, 7]
+              - [Santander, Sabadell, 3]
+              - [BBVA, CaixaBank, 3]
+              - [BBVA, ING, 7]
+              - [BBVA, Sabadell, 3]
+              - [CaixaBank, ING, 5]
+              - [CaixaBank, Sabadell, 1]
+              - [ING, Sabadell, 1/5]
+          children: *alternatives
+        Beneficios Jovenes:
+          preferences:
+            pairwise:
+              - [Santander, BBVA, 3]
+              - [Santander, CaixaBank, 5]
+              - [Santander, ING, 7]
+              - [Santander, Sabadell, 3]
+              - [BBVA, CaixaBank, 3]
+              - [BBVA, ING, 7]
+              - [BBVA, Sabadell, 3]
+              - [CaixaBank, ING, 5]
+              - [CaixaBank, Sabadell, 1/3]
+              - [ING, Sabadell, 1/7]
+          children: *alternatives
