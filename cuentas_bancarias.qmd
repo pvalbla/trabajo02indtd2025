@@ -12,7 +12,7 @@ El trabajo trata sobre el problema de decisión multicriterio:
 
 > **“Selección del mejor banco para abrir una cuenta universitaria o joven”**.
 
-El objetivo es evaluar **5 alternativas de bancos** (Santander, BBVA, CaixaBank, ING y Sabadell) basándose en una jerarquía de **3 criterios principales**:
+El objetivo es evaluar las **5 alternativas de bancos** (Santander, BBVA, CaixaBank, ING y Sabadell) basándose en una jerarquía de **3 criterios principales**:
 
 - **Condiciones Económicas**  
 - **Servicios y Comodidad**  
