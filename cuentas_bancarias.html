@@ -1,0 +1,2115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pablo Valdés Blasco">
+
+<title>Selección del mejor banco para abrir una cuenta universitaria o joven</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="cuentas_bancarias_files/libs/clipboard/clipboard.min.js"></script>
+<script src="cuentas_bancarias_files/libs/quarto-html/quarto.js"></script>
+<script src="cuentas_bancarias_files/libs/quarto-html/popper.min.js"></script>
+<script src="cuentas_bancarias_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="cuentas_bancarias_files/libs/quarto-html/anchor.min.js"></script>
+<link href="cuentas_bancarias_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="cuentas_bancarias_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="cuentas_bancarias_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="cuentas_bancarias_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="cuentas_bancarias_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="cuentas_bancarias_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="cuentas_bancarias_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="cuentas_bancarias_files/libs/viz-1.8.2/viz.js"></script>
+
+<link href="cuentas_bancarias_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+
+<script src="cuentas_bancarias_files/libs/grViz-binding-1.0.11/grViz.js"></script>
+
+<script src="cuentas_bancarias_files/libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="cuentas_bancarias_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="cuentas_bancarias.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Selección del mejor banco para abrir una cuenta universitaria o joven</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Pablo Valdés Blasco </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introducción-del-problema" class="level2">
+<h2 class="anchored" data-anchor-id="introducción-del-problema">1. Introducción del problema</h2>
+<p>El trabajo trata sobre el problema de decisión multicriterio:</p>
+<blockquote class="blockquote">
+<p><strong>“Selección del mejor banco para abrir una cuenta universitaria o joven”</strong>.</p>
+</blockquote>
+<p>El objetivo es evaluar <strong>5 alternativas de bancos</strong> (Santander, BBVA, CaixaBank, ING y Sabadell) basándose en una jerarquía de <strong>3 criterios principales</strong>:</p>
+<ul>
+<li><strong>Condiciones Económicas</strong><br>
+</li>
+<li><strong>Servicios y Comodidad</strong><br>
+</li>
+<li><strong>Accesibilidad y Beneficios</strong></li>
+</ul>
+<p>y sus subcriterios correspondientes (comisiones, requisitos de vinculación, calidad de la banca online, atención al cliente, red de cajeros, beneficios para jóvenes, etc.).</p>
+<p>Para ello, se aplicarán las técnicas vistas en clase:</p>
+<ul>
+<li>El <strong>Proceso Analítico Jerárquico (AHP)</strong>, primero con el paquete <code>ahp</code> y después mediante las funciones en R de la asignatura.</li>
+<li>El método <strong>ELECTRE I</strong>.</li>
+<li>El método <strong>PROMETHEE II</strong>.</li>
+</ul>
+<p>Finalmente, se compararán los resultados y se extraerán conclusiones sobre las posibles diferencias entre métodos.</p>
+<hr>
+</section>
+<section id="proceso-analítico-jerárquico-ahp" class="level2">
+<h2 class="anchored" data-anchor-id="proceso-analítico-jerárquico-ahp">2. Proceso Analítico Jerárquico (AHP)</h2>
+<p>Para el método AHP, se utiliza el paquete <code>ahp</code> de R. Este método requiere la definición de la jerarquía y la comparación por pares de todos los elementos en cada nivel, lo cual se ha definido en el fichero <strong><code>bancos.ahp</code></strong>.</p>
+<section id="cálculo-del-modelo-ahp-con-librería" class="level3">
+<h3 class="anchored" data-anchor-id="cálculo-del-modelo-ahp-con-librería">2.1 Cálculo del Modelo AHP (con librería)</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar librerías </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ahp)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'kableExtra' was built under R version 4.4.3</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar y Calcular AHP</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Cargar el modelo desde el fichero</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> ahp<span class="sc">::</span><span class="fu">Load</span>(<span class="st">"bancos.ahp"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Calcular las prioridades</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>ahp<span class="sc">::</span><span class="fu">Calculate</span>(model)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Analizar los resultados</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>results_table <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(ahp<span class="sc">::</span><span class="fu">AnalyzeTable</span>(model))</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>results_priority <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(ahp<span class="sc">::</span><span class="fu">AnalyzeTable</span>(model, <span class="at">variable =</span> <span class="st">"priority"</span>, <span class="at">sort =</span> <span class="st">"orig"</span>))</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(results_table) <span class="ot">&lt;-</span> results_table[, <span class="dv">1</span>]</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(results_priority) <span class="ot">&lt;-</span> results_priority[, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="diagrama-de-jerarquía" class="level3">
+<h3 class="anchored" data-anchor-id="diagrama-de-jerarquía">2.2 Diagrama de jerarquía</h3>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrar Diagrama </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Visualize</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-02eb2e6d3d06ea82e6f9" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-02eb2e6d3d06ea82e6f9">{"x":{"diagram":"digraph {\n\ngraph [rankdir = \"TB\"]\n\n\n\n  \"1\" [label = \"Seleccion del mejor banco para cuenta universitaria o joven\", tooltip = \"\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"2\" [label = \"Condiciones Economicas\", tooltip = \"priority: 63.7%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"3\" [label = \"Comisiones Cuenta\", tooltip = \"priority: 48.7%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"4\" [label = \"Comisiones Tarjeta\", tooltip = \"priority: 11.8%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"5\" [label = \"Comisiones Transferencias\", tooltip = \"priority: 11.8%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"6\" [label = \"Requisitos Vinculacion\", tooltip = \"priority: 27.6%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"7\" [label = \"Servicios Comodidad\", tooltip = \"priority: 25.8%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"8\" [label = \"Banca Online App\", tooltip = \"priority: 75.0%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"9\" [label = \"Atencion Cliente\", tooltip = \"priority: 25.0%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"10\" [label = \"Accesibilidad Beneficios\", tooltip = \"priority: 10.5%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"11\" [label = \"Cajeros Oficinas\", tooltip = \"priority: 50.0%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"12\" [label = \"Beneficios Jovenes\", tooltip = \"priority: 50.0%\n\", style = \"filled,rounded\", shape = \"box\", color = \"honeydew4\", fillcolor = \"#F0FFF0\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"black\"] \n  \"13\" [label = \"Alternatives\", tooltip = \"\", style = \"filled,rounded\", shape = \"box\", color = \"thistle4\", fillcolor = \"#D8BFD8\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"\"] \n  \"14\" [label = \"Santander\", tooltip = \"priority: 12.9%\n\", style = \"filled,rounded\", shape = \"box\", color = \"thistle4\", fillcolor = \"#D8BFD8\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"\"] \n  \"15\" [label = \"BBVA\", tooltip = \"priority: 26.1%\n\", style = \"filled,rounded\", shape = \"box\", color = \"thistle4\", fillcolor = \"#D8BFD8\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"\"] \n  \"16\" [label = \"CaixaBank\", tooltip = \"priority: 3.3%\n\", style = \"filled,rounded\", shape = \"box\", color = \"thistle4\", fillcolor = \"#D8BFD8\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"\"] \n  \"17\" [label = \"ING\", tooltip = \"priority: 51.3%\n\", style = \"filled,rounded\", shape = \"box\", color = \"thistle4\", fillcolor = \"#D8BFD8\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"\"] \n  \"18\" [label = \"Sabadell\", tooltip = \"priority: 6.3%\n\", style = \"filled,rounded\", shape = \"box\", color = \"thistle4\", fillcolor = \"#D8BFD8\", penwidth = \"4\", fontname = \"helvetica\", fontcolor = \"\"] \n\"1\"->\"2\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"1\"->\"7\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"1\"->\"10\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"2\"->\"3\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"2\"->\"4\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"2\"->\"5\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"2\"->\"6\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"7\"->\"8\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"7\"->\"9\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"10\"->\"11\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"10\"->\"12\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"3\"->\"13\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"4\"->\"13\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"5\"->\"13\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"6\"->\"13\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"8\"->\"13\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"9\"->\"13\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"11\"->\"13\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"12\"->\"13\" [arrowhead = \"vee\", color = \"grey35\", penwidth = \"2\", penwidth = \"2\"] \n\"13\"->\"14\" [penwidth = \"2\", color = \"grey35\", penwidth = \"2\", dir = \"none\"] \n\"13\"->\"15\" [dir = \"none\", color = \"grey35\", penwidth = \"2\", dir = \"none\"] \n\"13\"->\"16\" [dir = \"none\", color = \"grey35\", penwidth = \"2\", dir = \"none\"] \n\"13\"->\"17\" [dir = \"none\", color = \"grey35\", penwidth = \"2\", dir = \"none\"] \n\"13\"->\"18\" [dir = \"none\", color = \"grey35\", penwidth = \"2\", dir = \"none\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</section>
+<section id="resultados-y-análisis-ahp" class="level3">
+<h3 class="anchored" data-anchor-id="resultados-y-análisis-ahp">2.3 Resultados y Análisis AHP</h3>
+<p>Las tablas generadas por el paquete ahp nos permiten analizar el ranking final de los bancos, los pesos de cada criterio y subcriterio, además de la consistencia de nuestros juicios en las matrices de comparación.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Tabla de Análisis (Resultados Finales AHP)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(results_table, <span class="at">digits =</span> <span class="dv">3</span>, <span class="at">caption =</span> <span class="st">"Resultados Finales AHP: Contribución Total"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Resultados Finales AHP: Contribución Total</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Weight</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ING</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">BBVA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Santander</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sabadell</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">CaixaBank</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inconsistency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Seleccion del mejor banco para cuenta universitaria o joven</td>
+<td style="text-align: left;">Seleccion del mejor banco para cuenta universitaria o joven</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">0.398</td>
+<td style="text-align: right;">0.255</td>
+<td style="text-align: right;">0.166</td>
+<td style="text-align: right;">0.128</td>
+<td style="text-align: right;">0.053</td>
+<td style="text-align: right;">0.037</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Condiciones Economicas</td>
+<td style="text-align: left;">Condiciones Economicas</td>
+<td style="text-align: right;">0.637</td>
+<td style="text-align: right;">0.322</td>
+<td style="text-align: right;">0.144</td>
+<td style="text-align: right;">0.077</td>
+<td style="text-align: right;">0.071</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">0.058</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Comisiones Cuenta</td>
+<td style="text-align: left;">Comisiones Cuenta</td>
+<td style="text-align: right;">0.310</td>
+<td style="text-align: right;">0.159</td>
+<td style="text-align: right;">0.081</td>
+<td style="text-align: right;">0.040</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">0.054</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Requisitos Vinculacion</td>
+<td style="text-align: left;">Requisitos Vinculacion</td>
+<td style="text-align: right;">0.176</td>
+<td style="text-align: right;">0.092</td>
+<td style="text-align: right;">0.024</td>
+<td style="text-align: right;">0.013</td>
+<td style="text-align: right;">0.041</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: right;">0.056</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Comisiones Tarjeta</td>
+<td style="text-align: left;">Comisiones Tarjeta</td>
+<td style="text-align: right;">0.075</td>
+<td style="text-align: right;">0.043</td>
+<td style="text-align: right;">0.012</td>
+<td style="text-align: right;">0.012</td>
+<td style="text-align: right;">0.005</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.043</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Comisiones Transferencias</td>
+<td style="text-align: left;">Comisiones Transferencias</td>
+<td style="text-align: right;">0.075</td>
+<td style="text-align: right;">0.028</td>
+<td style="text-align: right;">0.027</td>
+<td style="text-align: right;">0.012</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.025</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Servicios Comodidad</td>
+<td style="text-align: left;">Servicios Comodidad</td>
+<td style="text-align: right;">0.258</td>
+<td style="text-align: right;">0.072</td>
+<td style="text-align: right;">0.078</td>
+<td style="text-align: right;">0.048</td>
+<td style="text-align: right;">0.041</td>
+<td style="text-align: right;">0.019</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Banca Online App</td>
+<td style="text-align: left;">Banca Online App</td>
+<td style="text-align: right;">0.194</td>
+<td style="text-align: right;">0.070</td>
+<td style="text-align: right;">0.070</td>
+<td style="text-align: right;">0.031</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.015</td>
+<td style="text-align: right;">0.031</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Atencion Cliente</td>
+<td style="text-align: left;">Atencion Cliente</td>
+<td style="text-align: right;">0.065</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.017</td>
+<td style="text-align: right;">0.033</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">0.054</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accesibilidad Beneficios</td>
+<td style="text-align: left;">Accesibilidad Beneficios</td>
+<td style="text-align: right;">0.105</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">0.032</td>
+<td style="text-align: right;">0.042</td>
+<td style="text-align: right;">0.016</td>
+<td style="text-align: right;">0.012</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cajeros Oficinas</td>
+<td style="text-align: left;">Cajeros Oficinas</td>
+<td style="text-align: right;">0.052</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.018</td>
+<td style="text-align: right;">0.018</td>
+<td style="text-align: right;">0.007</td>
+<td style="text-align: right;">0.007</td>
+<td style="text-align: right;">0.021</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beneficios Jovenes</td>
+<td style="text-align: left;">Beneficios Jovenes</td>
+<td style="text-align: right;">0.052</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">0.009</td>
+<td style="text-align: right;">0.005</td>
+<td style="text-align: right;">0.088</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Tabla de Prioridades (Alternativas por Criterio)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(results_priority, <span class="at">digits =</span> <span class="dv">3</span>, <span class="at">caption =</span> <span class="st">"Prioridades Locales por Subcriterio"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Prioridades Locales por Subcriterio</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Priority</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Santander</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">BBVA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">CaixaBank</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ING</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sabadell</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inconsistency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Seleccion del mejor banco para cuenta universitaria o joven</td>
+<td style="text-align: left;">Seleccion del mejor banco para cuenta universitaria o joven</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.037</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Condiciones Economicas</td>
+<td style="text-align: left;">Condiciones Economicas</td>
+<td style="text-align: right;">0.637</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.058</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Comisiones Cuenta</td>
+<td style="text-align: left;">Comisiones Cuenta</td>
+<td style="text-align: right;">0.487</td>
+<td style="text-align: right;">0.129</td>
+<td style="text-align: right;">0.261</td>
+<td style="text-align: right;">0.033</td>
+<td style="text-align: right;">0.513</td>
+<td style="text-align: right;">0.063</td>
+<td style="text-align: right;">0.054</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Comisiones Tarjeta</td>
+<td style="text-align: left;">Comisiones Tarjeta</td>
+<td style="text-align: right;">0.118</td>
+<td style="text-align: right;">0.159</td>
+<td style="text-align: right;">0.159</td>
+<td style="text-align: right;">0.036</td>
+<td style="text-align: right;">0.575</td>
+<td style="text-align: right;">0.071</td>
+<td style="text-align: right;">0.043</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Comisiones Transferencias</td>
+<td style="text-align: left;">Comisiones Transferencias</td>
+<td style="text-align: right;">0.118</td>
+<td style="text-align: right;">0.158</td>
+<td style="text-align: right;">0.358</td>
+<td style="text-align: right;">0.036</td>
+<td style="text-align: right;">0.373</td>
+<td style="text-align: right;">0.075</td>
+<td style="text-align: right;">0.025</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Requisitos Vinculacion</td>
+<td style="text-align: left;">Requisitos Vinculacion</td>
+<td style="text-align: right;">0.276</td>
+<td style="text-align: right;">0.072</td>
+<td style="text-align: right;">0.137</td>
+<td style="text-align: right;">0.037</td>
+<td style="text-align: right;">0.522</td>
+<td style="text-align: right;">0.232</td>
+<td style="text-align: right;">0.056</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Servicios Comodidad</td>
+<td style="text-align: left;">Servicios Comodidad</td>
+<td style="text-align: right;">0.258</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Banca Online App</td>
+<td style="text-align: left;">Banca Online App</td>
+<td style="text-align: right;">0.750</td>
+<td style="text-align: right;">0.161</td>
+<td style="text-align: right;">0.362</td>
+<td style="text-align: right;">0.076</td>
+<td style="text-align: right;">0.362</td>
+<td style="text-align: right;">0.039</td>
+<td style="text-align: right;">0.031</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Atencion Cliente</td>
+<td style="text-align: left;">Atencion Cliente</td>
+<td style="text-align: right;">0.250</td>
+<td style="text-align: right;">0.261</td>
+<td style="text-align: right;">0.129</td>
+<td style="text-align: right;">0.063</td>
+<td style="text-align: right;">0.033</td>
+<td style="text-align: right;">0.513</td>
+<td style="text-align: right;">0.054</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Accesibilidad Beneficios</td>
+<td style="text-align: left;">Accesibilidad Beneficios</td>
+<td style="text-align: right;">0.105</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cajeros Oficinas</td>
+<td style="text-align: left;">Cajeros Oficinas</td>
+<td style="text-align: right;">0.500</td>
+<td style="text-align: right;">0.346</td>
+<td style="text-align: right;">0.346</td>
+<td style="text-align: right;">0.135</td>
+<td style="text-align: right;">0.037</td>
+<td style="text-align: right;">0.135</td>
+<td style="text-align: right;">0.021</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beneficios Jovenes</td>
+<td style="text-align: left;">Beneficios Jovenes</td>
+<td style="text-align: right;">0.500</td>
+<td style="text-align: right;">0.448</td>
+<td style="text-align: right;">0.262</td>
+<td style="text-align: right;">0.090</td>
+<td style="text-align: right;">0.033</td>
+<td style="text-align: right;">0.167</td>
+<td style="text-align: right;">0.088</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="conclusiones-del-método-ahp" class="level3">
+<h3 class="anchored" data-anchor-id="conclusiones-del-método-ahp">2.4 Conclusiones del Método AHP</h3>
+<p>Estudio de inconsistencia</p>
+<p>Un paso fundamental en AHP es verificar la consistencia de las matrices de comparación 2 a 2. Según la teoría, un ratio de inconsistencia superior al 10 % (0.10) indicaría juicios poco coherentes.</p>
+<p>En los resultados del paquete ahp, las inconsistencias de la matriz principal (criterios Condiciones Económicas, Servicios y Comodidad, Accesibilidad y Beneficios) y de las matrices de subcriterios y alternativas se mantienen por debajo de dicho umbral, por lo que los juicios pueden considerarse aceptablemente consistentes.</p>
+<p>Comentarios al ranking</p>
+<p>A partir de la tabla “Resultados Finales AHP: Contribución Total” se obtiene el ranking de bancos. En este modelo:</p>
+<ul>
+<li><p>La alternativa mejor valorada es típicamente un banco con bajas comisiones, pocos requisitos de vinculación y buena banca online (en la práctica suele ser ING en este tipo de jerarquía).</p></li>
+<li><p>Le siguen bancos con buen equilibrio entre condiciones económicas y servicios, como BBVA o Santander.</p></li>
+<li><p>Los bancos con comisiones más altas y menores ventajas para jóvenes (por ejemplo, mayor vinculación o menos beneficios específicos) tienden a ocupar las últimas posiciones del ranking.</p></li>
+<li><p>La interpretación detallada se realiza consultando las tablas generadas al ejecutar el documento.</p></li>
+</ul>
+</section>
+</section>
+<section id="método-ahp-con-r" class="level2">
+<h2 class="anchored" data-anchor-id="método-ahp-con-r">3. Método AHP (con R)</h2>
+<p>En este apartado se replica el análisis AHP utilizando las funciones R proporcionadas en la asignatura, sin emplear directamente el paquete ahp.</p>
+<section id="nivel-1-criterios-principales" class="level3">
+<h3 class="anchored" data-anchor-id="nivel-1-criterios-principales">3.1. Nivel 1: Criterios Principales</h3>
+<p>Primero, definimos la matriz de comparación 2 a 2 para los 3 criterios principales, utilizando los mismos valores que en el fichero bancos.ahp:</p>
+<ul>
+<li><p>[Condiciones Económicas (3) vs Servicios y Comodidad]</p></li>
+<li><p>[Condiciones Económicas (5) vs Accesibilidad y Beneficios]</p></li>
+<li><p>[Servicios y Comodidad (3) vs Accesibilidad y Beneficios]</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Cargar funciones de la asignatura</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"teoriadecision_funciones_multicriterio.R"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"teoriadecision_funciones_multicriterio_utiles.R"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"teoriadecision_funciones_multicriterio_diagram.R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Cargando paquete requerido: shape</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#1. Matriz de Criterios Principales</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>mat_c1 <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="at">vector_valoraciones_diagsup =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">3</span>),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="at">numalternativas =</span> <span class="dv">3</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="at">v.nombres.alternativas =</span> <span class="fu">c</span>(<span class="st">"Condiciones Economicas"</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="st">"Servicios Comodidad"</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="st">"Accesibilidad Beneficios"</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">#2. Pesos locales</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>pesos_c1_R <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_c1)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co">#3. Inconsistencia</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>incons_c1_R <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_c1)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Mostrar resultados</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(mat_c1, <span class="at">digits =</span> <span class="dv">3</span>, <span class="at">caption =</span> <span class="st">"Matriz Criterios Principales (AHP-R)"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Matriz Criterios Principales (AHP-R)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Condiciones Economicas</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Servicios Comodidad</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Accesibilidad Beneficios</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Condiciones Economicas</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">3.000</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Servicios Comodidad</td>
+<td style="text-align: right;">0.333</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Accesibilidad Beneficios</td>
+<td style="text-align: right;">0.200</td>
+<td style="text-align: right;">0.333</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(<span class="fu">t</span>(pesos_c1_R), <span class="at">digits =</span> <span class="dv">4</span>, <span class="at">caption =</span> <span class="st">"Pesos Criterios Principales (AHP-R)"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pesos Criterios Principales (AHP-R)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Condiciones Economicas</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Servicios Comodidad</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Accesibilidad Beneficios</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.6333</td>
+<td style="text-align: right;">0.2605</td>
+<td style="text-align: right;">0.1062</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Ratio de Inconsistencia (Criterios):"</span>, <span class="fu">round</span>(incons_c1_R<span class="sc">$</span>RI.coef.inconsistencia, <span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Ratio de Inconsistencia (Criterios): 0.0332"</code></pre>
+</div>
+</div>
+</section>
+<section id="nivel-2-subcriterios" class="level3">
+<h3 class="anchored" data-anchor-id="nivel-2-subcriterios">3.2. Nivel 2: Subcriterios</h3>
+<p>Definimos las matrices de comparación para los subcriterios que dependen de cada criterio principal, coherentes con el .ahp.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Subcriterios de Condiciones Económicas</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># [Comisiones Cuenta (3) vs Comisiones Tarjeta]</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># [Comisiones Cuenta (3) vs Comisiones Transferencias]</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># [Comisiones Cuenta (3) vs Requisitos Vinculacion]</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># [Comisiones Tarjeta (1) vs Comisiones Transferencias]</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co"># [Comisiones Tarjeta (1/3) vs Requisitos Vinculacion]</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># [Comisiones Transferencias (1/3) vs Requisitos Vinculacion]</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>mat_c1_sub <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="at">vector_valoraciones_diagsup =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>),</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="at">numalternativas =</span> <span class="dv">4</span>,</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="at">v.nombres.alternativas =</span> <span class="fu">c</span>(<span class="st">"Comisiones Cuenta"</span>,</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="st">"Comisiones Tarjeta"</span>,</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="st">"Comisiones Transferencias"</span>,</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="st">"Requisitos Vinculacion"</span>)</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>pesos_c1_sub_R   <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_c1_sub)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>incons_c1_sub_R  <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_c1_sub)</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"RI (Subcriterios Condiciones Económicas):"</span>,</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(incons_c1_sub_R<span class="sc">$</span>RI.coef.inconsistencia, <span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "RI (Subcriterios Condiciones Económicas): 0.0572"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Subcriterios de Servicios y Comodidad</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># [Banca Online App (3) vs Atencion Cliente]</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>mat_c2_sub <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="at">vector_valoraciones_diagsup =</span> <span class="fu">c</span>(<span class="dv">3</span>),</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="at">numalternativas =</span> <span class="dv">2</span>,</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="at">v.nombres.alternativas =</span> <span class="fu">c</span>(<span class="st">"Banca Online App"</span>, <span class="st">"Atencion Cliente"</span>)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>pesos_c2_sub_R  <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_c2_sub)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>incons_c2_sub_R <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_c2_sub)</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"RI (Subcriterios Servicios y Comodidad):"</span>,</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(incons_c2_sub_R<span class="sc">$</span>RI.coef.inconsistencia, <span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "RI (Subcriterios Servicios y Comodidad): NaN"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Subcriterios de Accesibilidad y Beneficios</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># [Cajeros Oficinas (1) vs Beneficios Jovenes]</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>mat_c3_sub <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="at">vector_valoraciones_diagsup =</span> <span class="fu">c</span>(<span class="dv">1</span>),</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="at">numalternativas =</span> <span class="dv">2</span>,</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="at">v.nombres.alternativas =</span> <span class="fu">c</span>(<span class="st">"Cajeros Oficinas"</span>, <span class="st">"Beneficios Jovenes"</span>)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>pesos_c3_sub_R  <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_c3_sub)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>incons_c3_sub_R <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_c3_sub)</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"RI (Subcriterios Accesibilidad y Beneficios):"</span>,</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(incons_c3_sub_R<span class="sc">$</span>RI.coef.inconsistencia, <span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "RI (Subcriterios Accesibilidad y Beneficios): NaN"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostramos tablas de pesos</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(<span class="fu">t</span>(pesos_c1_sub_R), <span class="at">digits =</span> <span class="dv">4</span>, <span class="at">caption =</span> <span class="st">"Pesos Subcriterios Condiciones Económicas (AHP-R)"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pesos Subcriterios Condiciones Económicas (AHP-R)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Comisiones Cuenta</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Comisiones Tarjeta</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Comisiones Transferencias</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Requisitos Vinculacion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.4732</td>
+<td style="text-align: right;">0.122</td>
+<td style="text-align: right;">0.122</td>
+<td style="text-align: right;">0.2827</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(<span class="fu">t</span>(pesos_c2_sub_R), <span class="at">digits =</span> <span class="dv">4</span>, <span class="at">caption =</span> <span class="st">"Pesos Subcriterios Servicios y Comodidad (AHP-R)"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pesos Subcriterios Servicios y Comodidad (AHP-R)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Banca Online App</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Atencion Cliente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">0.25</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(<span class="fu">t</span>(pesos_c3_sub_R), <span class="at">digits =</span> <span class="dv">4</span>, <span class="at">caption =</span> <span class="st">"Pesos Subcriterios Accesibilidad y Beneficios (AHP-R)"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pesos Subcriterios Accesibilidad y Beneficios (AHP-R)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Cajeros Oficinas</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Beneficios Jovenes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0.5</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="nivel-3-alternativas" class="level3">
+<h3 class="anchored" data-anchor-id="nivel-3-alternativas">3.3. Nivel 3: Alternativas</h3>
+<p>Se crean las 8 matrices de comparación para las 5 alternativas (bancos), una por cada subcriterio. Utilizamos los mismos juicios 2 a 2 que en el fichero .ahp.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nombres de las alternativas (bancos)</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>v_nombres_bancos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Santander"</span>, <span class="st">"BBVA"</span>, <span class="st">"CaixaBank"</span>, <span class="st">"ING"</span>, <span class="st">"Sabadell"</span>)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>num_bancos <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>lista_pesos_locales   <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>lista_inconsistencia  <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Comisiones Cuenta</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>mat_alt_CC <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">7</span>),</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>num_bancos, v_nombres_bancos)</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>lista_pesos_locales[[<span class="st">"Comisiones Cuenta"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_alt_CC)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>lista_inconsistencia[[<span class="st">"Comisiones Cuenta"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_alt_CC)<span class="sc">$</span>RI.coef.inconsistencia</span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Comisiones Tarjeta</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>mat_alt_CT <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">7</span>),</span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>num_bancos, v_nombres_bancos)</span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>lista_pesos_locales[[<span class="st">"Comisiones Tarjeta"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_alt_CT)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>lista_inconsistencia[[<span class="st">"Comisiones Tarjeta"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_alt_CT)<span class="sc">$</span>RI.coef.inconsistencia</span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Comisiones Transferencias</span></span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>mat_alt_CTr <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">5</span>),</span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>num_bancos, v_nombres_bancos)</span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>lista_pesos_locales[[<span class="st">"Comisiones Transferencias"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_alt_CTr)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a>lista_inconsistencia[[<span class="st">"Comisiones Transferencias"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_alt_CTr)<span class="sc">$</span>RI.coef.inconsistencia</span>
+<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Requisitos Vinculacion</span></span>
+<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a>mat_alt_RV <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">3</span>),</span>
+<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a>num_bancos, v_nombres_bancos)</span>
+<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a>lista_pesos_locales[[<span class="st">"Requisitos Vinculacion"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_alt_RV)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a>lista_inconsistencia[[<span class="st">"Requisitos Vinculacion"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_alt_RV)<span class="sc">$</span>RI.coef.inconsistencia</span>
+<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Banca Online App</span></span>
+<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-43"><a href="#cb29-43" aria-hidden="true" tabindex="-1"></a>mat_alt_BO <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb29-44"><a href="#cb29-44" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">7</span>),</span>
+<span id="cb29-45"><a href="#cb29-45" aria-hidden="true" tabindex="-1"></a>num_bancos, v_nombres_bancos)</span>
+<span id="cb29-46"><a href="#cb29-46" aria-hidden="true" tabindex="-1"></a>lista_pesos_locales[[<span class="st">"Banca Online App"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_alt_BO)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb29-47"><a href="#cb29-47" aria-hidden="true" tabindex="-1"></a>lista_inconsistencia[[<span class="st">"Banca Online App"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_alt_BO)<span class="sc">$</span>RI.coef.inconsistencia</span>
+<span id="cb29-48"><a href="#cb29-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-49"><a href="#cb29-49" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Atencion Cliente</span></span>
+<span id="cb29-50"><a href="#cb29-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-51"><a href="#cb29-51" aria-hidden="true" tabindex="-1"></a>mat_alt_AC <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb29-52"><a href="#cb29-52" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>),</span>
+<span id="cb29-53"><a href="#cb29-53" aria-hidden="true" tabindex="-1"></a>num_bancos, v_nombres_bancos)</span>
+<span id="cb29-54"><a href="#cb29-54" aria-hidden="true" tabindex="-1"></a>lista_pesos_locales[[<span class="st">"Atencion Cliente"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_alt_AC)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb29-55"><a href="#cb29-55" aria-hidden="true" tabindex="-1"></a>lista_inconsistencia[[<span class="st">"Atencion Cliente"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_alt_AC)<span class="sc">$</span>RI.coef.inconsistencia</span>
+<span id="cb29-56"><a href="#cb29-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-57"><a href="#cb29-57" aria-hidden="true" tabindex="-1"></a><span class="co"># 7. Cajeros Oficinas</span></span>
+<span id="cb29-58"><a href="#cb29-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-59"><a href="#cb29-59" aria-hidden="true" tabindex="-1"></a>mat_alt_CO <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb29-60"><a href="#cb29-60" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>),</span>
+<span id="cb29-61"><a href="#cb29-61" aria-hidden="true" tabindex="-1"></a>num_bancos, v_nombres_bancos)</span>
+<span id="cb29-62"><a href="#cb29-62" aria-hidden="true" tabindex="-1"></a>lista_pesos_locales[[<span class="st">"Cajeros Oficinas"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_alt_CO)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb29-63"><a href="#cb29-63" aria-hidden="true" tabindex="-1"></a>lista_inconsistencia[[<span class="st">"Cajeros Oficinas"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_alt_CO)<span class="sc">$</span>RI.coef.inconsistencia</span>
+<span id="cb29-64"><a href="#cb29-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-65"><a href="#cb29-65" aria-hidden="true" tabindex="-1"></a><span class="co"># 8. Beneficios Jovenes</span></span>
+<span id="cb29-66"><a href="#cb29-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-67"><a href="#cb29-67" aria-hidden="true" tabindex="-1"></a>mat_alt_BJ <span class="ot">&lt;-</span> <span class="fu">multicriterio.crea.matrizvaloraciones_mej</span>(</span>
+<span id="cb29-68"><a href="#cb29-68" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>),</span>
+<span id="cb29-69"><a href="#cb29-69" aria-hidden="true" tabindex="-1"></a>num_bancos, v_nombres_bancos)</span>
+<span id="cb29-70"><a href="#cb29-70" aria-hidden="true" tabindex="-1"></a>lista_pesos_locales[[<span class="st">"Beneficios Jovenes"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.variante3.basico</span>(mat_alt_BJ)<span class="sc">$</span>valoraciones.ahp</span>
+<span id="cb29-71"><a href="#cb29-71" aria-hidden="true" tabindex="-1"></a>lista_inconsistencia[[<span class="st">"Beneficios Jovenes"</span>]] <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoAHP.coef.inconsistencia</span>(mat_alt_BJ)<span class="sc">$</span>RI.coef.inconsistencia</span>
+<span id="cb29-72"><a href="#cb29-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-73"><a href="#cb29-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Estudio de inconsistencia</span></span>
+<span id="cb29-74"><a href="#cb29-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-75"><a href="#cb29-75" aria-hidden="true" tabindex="-1"></a>inconsistencia_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Ratio_Inconsistencia =</span> <span class="fu">unlist</span>(lista_inconsistencia))</span>
+<span id="cb29-76"><a href="#cb29-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-77"><a href="#cb29-77" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(inconsistencia_df, <span class="at">digits =</span> <span class="dv">4</span>, <span class="at">caption =</span> <span class="st">"Inconsistencia de las 8 Matrices de Alternativas (Subcriterios)"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb29-78"><a href="#cb29-78" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Inconsistencia de las 8 Matrices de Alternativas (Subcriterios)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Ratio_Inconsistencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Comisiones Cuenta</td>
+<td style="text-align: right;">0.0530</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Comisiones Tarjeta</td>
+<td style="text-align: right;">0.0425</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Comisiones Transferencias</td>
+<td style="text-align: right;">0.0251</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Requisitos Vinculacion</td>
+<td style="text-align: right;">0.0557</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Banca Online App</td>
+<td style="text-align: right;">0.0304</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Atencion Cliente</td>
+<td style="text-align: right;">0.0530</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cajeros Oficinas</td>
+<td style="text-align: right;">0.0210</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beneficios Jovenes</td>
+<td style="text-align: right;">0.0876</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="cálculo-del-ranking-global-ahp-r" class="level3">
+<h3 class="anchored" data-anchor-id="cálculo-del-ranking-global-ahp-r">3.4. Cálculo del Ranking Global (AHP-R)</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Vector de pesos globales de los 8 subcriterios</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>vec_pesos_globales_sub_R <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>pesos_c1_R[<span class="dv">1</span>] <span class="sc">*</span> pesos_c1_sub_R,  <span class="co"># 4 subcriterios condiciones</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>pesos_c1_R[<span class="dv">2</span>] <span class="sc">*</span> pesos_c2_sub_R,  <span class="co"># 2 subcriterios servicios</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>pesos_c1_R[<span class="dv">3</span>] <span class="sc">*</span> pesos_c3_sub_R   <span class="co"># 2 subcriterios accesibilidad</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Matriz de pesos locales de alternativas (8 x 5)</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>mat_alt_final_R <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, lista_pesos_locales)</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Ranking final</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>ranking_final_R <span class="ot">&lt;-</span> vec_pesos_globales_sub_R <span class="sc">%*%</span> mat_alt_final_R</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>ranking_df_R <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">t</span>(ranking_final_R))</span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(ranking_df_R) <span class="ot">&lt;-</span> <span class="st">"Ponderacion_Global_AHP_R"</span></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>ranking_df_R<span class="sc">$</span>Banco <span class="ot">&lt;-</span> <span class="fu">rownames</span>(ranking_df_R)</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>ranking_df_R <span class="ot">&lt;-</span> ranking_df_R[<span class="fu">order</span>(ranking_df_R<span class="sc">$</span>Ponderacion_Global_AHP_R, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"Banco"</span>,<span class="st">"Ponderacion_Global_AHP_R"</span>)]</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(ranking_df_R, <span class="at">digits =</span> <span class="dv">4</span>, <span class="at">caption =</span> <span class="st">"Ranking Final (AHP con Funciones R)"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Ranking Final (AHP con Funciones R)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Banco</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Ponderacion_Global_AHP_R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ING</td>
+<td style="text-align: left;">ING</td>
+<td style="text-align: right;">0.3917</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BBVA</td>
+<td style="text-align: left;">BBVA</td>
+<td style="text-align: right;">0.2545</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Santander</td>
+<td style="text-align: left;">Santander</td>
+<td style="text-align: right;">0.1689</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sabadell</td>
+<td style="text-align: left;">Sabadell</td>
+<td style="text-align: right;">0.1297</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CaixaBank</td>
+<td style="text-align: left;">CaixaBank</td>
+<td style="text-align: right;">0.0552</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="conclusiones-del-método-ahp-con-r" class="level3">
+<h3 class="anchored" data-anchor-id="conclusiones-del-método-ahp-con-r">3.5. Conclusiones del Método AHP (con R)</h3>
+<p>El análisis manual con las funciones R de la asignatura (AHP con R) cumple dos objetivos:</p>
+<ul>
+<li><p>Estudio de inconsistencia: se ha calculado el ratio de inconsistencia para cada una de las matrices de comparación (criterios, subcriterios y alternativas). Todos los valores se mantienen por debajo del límite del 10 %, por lo que los juicios pueden considerarse coherentes.</p></li>
+<li><p>Ranking final: el ranking obtenido (ver tabla “Ranking Final (AHP con Funciones R)”) coincide con el ranking calculado mediante el paquete ahp.</p></li>
+</ul>
+<p>Conclusión: ambos métodos de AHP (paquete y funciones R) producen el mismo resultado, lo que confirma la correcta aplicación de la técnica en este problema de selección de banco para cuenta joven.</p>
+</section>
+</section>
+<section id="método-electre" class="level2">
+<h2 class="anchored" data-anchor-id="método-electre">4. Método ELECTRE</h2>
+<p>El método ELECTRE es un enfoque basado en la comparación por pares de alternativas, utilizando índices de concordancia y discordancia para establecer relaciones de superación y determinar un núcleo de alternativas no dominadas.</p>
+<section id="carga-de-funciones-y-preparación-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="carga-de-funciones-y-preparación-de-datos">4.1 Carga de Funciones y Preparación de Datos</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar funciones ELECTRE</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"teoriadecision_funciones_multicriterio.R"</span>)</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"teoriadecision_funciones_multicriterio_utiles.R"</span>)</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(qgraph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'qgraph' was built under R version 4.4.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nombres de los 8 subcriterios (hojas del árbol)</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>nombres_subcriterios <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Comisiones Cuenta"</span>,</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="st">"Comisiones Tarjeta"</span>,</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="st">"Comisiones Transferencias"</span>,</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="st">"Requisitos Vinculacion"</span>,</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="st">"Banca Online App"</span>,</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="st">"Atencion Cliente"</span>,</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="st">"Cajeros Oficinas"</span>,</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="st">"Beneficios Jovenes"</span>)</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Matriz base de prioridades locales (desde AHP)</span></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>matriz_base <span class="ot">&lt;-</span> results_priority[nombres_subcriterios,</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"Santander"</span>,<span class="st">"BBVA"</span>,<span class="st">"CaixaBank"</span>,<span class="st">"ING"</span>,<span class="st">"Sabadell"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="creación-de-la-matriz-de-decisión" class="level3">
+<h3 class="anchored" data-anchor-id="creación-de-la-matriz-de-decisión">4.2 Creación de la Matriz de Decisión</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Matriz de decisión: Alternativas x Criterios</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>matriz_electre <span class="ot">&lt;-</span> <span class="fu">t</span>(matriz_base)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(matriz_electre, <span class="at">digits =</span> <span class="dv">3</span>, <span class="at">caption =</span> <span class="st">"Matriz de Decisión para ELECTRE (Bancos x Subcriterios)"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Matriz de Decisión para ELECTRE (Bancos x Subcriterios)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Comisiones Cuenta</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Comisiones Tarjeta</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Comisiones Transferencias</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Requisitos Vinculacion</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Banca Online App</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Atencion Cliente</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Cajeros Oficinas</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Beneficios Jovenes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Santander</td>
+<td style="text-align: right;">0.129</td>
+<td style="text-align: right;">0.159</td>
+<td style="text-align: right;">0.158</td>
+<td style="text-align: right;">0.072</td>
+<td style="text-align: right;">0.161</td>
+<td style="text-align: right;">0.261</td>
+<td style="text-align: right;">0.346</td>
+<td style="text-align: right;">0.448</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BBVA</td>
+<td style="text-align: right;">0.261</td>
+<td style="text-align: right;">0.159</td>
+<td style="text-align: right;">0.358</td>
+<td style="text-align: right;">0.137</td>
+<td style="text-align: right;">0.362</td>
+<td style="text-align: right;">0.129</td>
+<td style="text-align: right;">0.346</td>
+<td style="text-align: right;">0.262</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CaixaBank</td>
+<td style="text-align: right;">0.033</td>
+<td style="text-align: right;">0.036</td>
+<td style="text-align: right;">0.036</td>
+<td style="text-align: right;">0.037</td>
+<td style="text-align: right;">0.076</td>
+<td style="text-align: right;">0.063</td>
+<td style="text-align: right;">0.135</td>
+<td style="text-align: right;">0.090</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ING</td>
+<td style="text-align: right;">0.513</td>
+<td style="text-align: right;">0.575</td>
+<td style="text-align: right;">0.373</td>
+<td style="text-align: right;">0.522</td>
+<td style="text-align: right;">0.362</td>
+<td style="text-align: right;">0.033</td>
+<td style="text-align: right;">0.037</td>
+<td style="text-align: right;">0.033</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sabadell</td>
+<td style="text-align: right;">0.063</td>
+<td style="text-align: right;">0.071</td>
+<td style="text-align: right;">0.075</td>
+<td style="text-align: right;">0.232</td>
+<td style="text-align: right;">0.039</td>
+<td style="text-align: right;">0.513</td>
+<td style="text-align: right;">0.135</td>
+<td style="text-align: right;">0.167</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="definición-de-pesos-y-parámetros" class="level3">
+<h3 class="anchored" data-anchor-id="definición-de-pesos-y-parámetros">4.3 Definición de Pesos y Parámetros</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Pesos globales de los subcriterios (desde AHP)</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>pesos_globales_ahp <span class="ot">&lt;-</span> results_table[nombres_subcriterios, <span class="st">"Weight"</span>]</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>pesos_electre <span class="ot">&lt;-</span> pesos_globales_ahp <span class="sc">/</span> <span class="fu">sum</span>(pesos_globales_ahp)</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(<span class="fu">t</span>(pesos_electre), <span class="at">digits =</span> <span class="dv">3</span>, <span class="at">caption =</span> <span class="st">"Pesos Normalizados para ELECTRE"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="st">"striped"</span>, <span class="at">full_width =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="st">"center"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<caption>Pesos Normalizados para ELECTRE</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.31</td>
+<td style="text-align: right;">0.075</td>
+<td style="text-align: right;">0.075</td>
+<td style="text-align: right;">0.176</td>
+<td style="text-align: right;">0.194</td>
+<td style="text-align: right;">0.065</td>
+<td style="text-align: right;">0.052</td>
+<td style="text-align: right;">0.052</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Parámetros</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>alpha_concordancia <span class="ot">&lt;-</span> <span class="fl">0.7</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>umbrales_discordancia <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="fl">0.10</span>,  <span class="co"># Comisiones Cuenta</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="fl">0.10</span>,  <span class="co"># Comisiones Tarjeta</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="cn">Inf</span>,   <span class="co"># Comisiones Transferencias</span></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a><span class="cn">Inf</span>,   <span class="co"># Requisitos Vinculacion</span></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a><span class="fl">0.10</span>,  <span class="co"># Banca Online App</span></span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a><span class="cn">Inf</span>,   <span class="co"># Atencion Cliente</span></span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a><span class="cn">Inf</span>,   <span class="co"># Cajeros Oficinas</span></span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a><span class="cn">Inf</span>    <span class="co"># Beneficios Jovenes</span></span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ejecución-y-análisis-iterativo" class="level3">
+<h3 class="anchored" data-anchor-id="ejecución-y-análisis-iterativo">4.4 Ejecución y Análisis Iterativo</h3>
+<section id="iteración-1" class="level4">
+<h4 class="anchored" data-anchor-id="iteración-1">Iteración 1</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Iteración 1: todas las alternativas</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>salida_electre1 <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoELECTRE_I</span>(</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="at">tabdecs.X =</span> matriz_electre,</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="at">pesos.criterios =</span> pesos_electre,</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="at">nivel.concordancia.minimo.alpha =</span> alpha_concordancia,</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="at">no.se.compensan =</span> umbrales_discordancia</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>salida_electre1<span class="sc">$</span>nucleo_aprox</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ING 
+  4 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafo de dominancia</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>qgraph<span class="sc">::</span><span class="fu">qgraph</span>(salida_electre1<span class="sc">$</span>relacion.dominante,</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="at">labels =</span> <span class="fu">rownames</span>(matriz_electre),</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="at">edge.labels =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="at">posCol =</span> <span class="st">"blue"</span>,</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="at">label.cex =</span> <span class="fl">1.2</span>,</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="at">label.color =</span> <span class="st">"black"</span>,</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="at">vsize =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="cuentas_bancarias_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="iteración-2" class="level4">
+<h4 class="anchored" data-anchor-id="iteración-2">Iteración 2</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Iteración 2: restringida al núcleo de la iteración 1</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>alternativas_nucleo1        <span class="ot">&lt;-</span> salida_electre1<span class="sc">$</span>nucleo_aprox</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>alternativas_nucleo1_nombres <span class="ot">&lt;-</span> <span class="fu">names</span>(alternativas_nucleo1)</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"--- ELECTRE I: Núcleo Iteración 1 ---"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "--- ELECTRE I: Núcleo Iteración 1 ---"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(alternativas_nucleo1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ING 
+  4 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">length</span>(alternativas_nucleo1_nombres) <span class="sc">&gt;</span> <span class="dv">1</span>) {</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">--- Ejecutando ELECTRE I: Iteración 2 (solo núcleo) ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Alternativas en esta iteración:"</span>)</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(alternativas_nucleo1_nombres)</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>  salida_electre2 <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodoELECTRE_I</span>(</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">tabdecs.X =</span> matriz_electre,</span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">pesos.criterios =</span> pesos_electre,</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">nivel.concordancia.minimo.alpha =</span> alpha_concordancia,</span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">no.se.compensan =</span> umbrales_discordancia,</span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">que.alternativas =</span> alternativas_nucleo1_nombres</span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">--- ELECTRE Iteración 2: Núcleo Final ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(salida_electre2<span class="sc">$</span>nucleo_aprox)</span>
+<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a>  qgraph<span class="sc">::</span><span class="fu">qgraph</span>(salida_electre2<span class="sc">$</span>relacion.dominante, </span>
+<span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a>                 <span class="at">labels =</span> alternativas_nucleo1_nombres,</span>
+<span id="cb48-20"><a href="#cb48-20" aria-hidden="true" tabindex="-1"></a>                 <span class="at">edge.labels =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb48-21"><a href="#cb48-21" aria-hidden="true" tabindex="-1"></a>                 <span class="at">posCol =</span> <span class="st">"blue"</span>,</span>
+<span id="cb48-22"><a href="#cb48-22" aria-hidden="true" tabindex="-1"></a>                 <span class="at">label.cex =</span> <span class="fl">1.2</span>,</span>
+<span id="cb48-23"><a href="#cb48-23" aria-hidden="true" tabindex="-1"></a>                 <span class="at">label.color =</span> <span class="st">"black"</span>,</span>
+<span id="cb48-24"><a href="#cb48-24" aria-hidden="true" tabindex="-1"></a>                 <span class="at">vsize =</span> <span class="dv">10</span>)</span>
+<span id="cb48-25"><a href="#cb48-25" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-26"><a href="#cb48-26" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb48-27"><a href="#cb48-27" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-28"><a href="#cb48-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">--- ELECTRE I: el núcleo de la Iteración 1 ya contiene una única alternativa ---</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb48-29"><a href="#cb48-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"El método identifica directamente a"</span>, alternativas_nucleo1_nombres,</span>
+<span id="cb48-30"><a href="#cb48-30" aria-hidden="true" tabindex="-1"></a>      <span class="st">"como única alternativa no dominada.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb48-31"><a href="#cb48-31" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+--- ELECTRE I: el núcleo de la Iteración 1 ya contiene una única alternativa ---
+El método identifica directamente a ING como única alternativa no dominada.</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="conclusiones-del-método-electre-i" class="level3">
+<h3 class="anchored" data-anchor-id="conclusiones-del-método-electre-i">4.5 Conclusiones del Método ELECTRE I</h3>
+<p>El método ELECTRE I se ha ejecutado siguiendo el procedimiento iterativo habitual:</p>
+<ul>
+<li><p>En la Iteración 1, se evaluaron todas las alternativas (los cinco bancos). El grafo de dominancia mostró que varias alternativas estaban claramente dominadas por otras, lo que permitió reducir el conjunto de opciones relevantes.</p></li>
+<li><p>El núcleo aproximado obtenido tras la primera iteración contiene una única alternativa: ING, que no es dominada por ningún otro banco en los criterios considerados.</p></li>
+</ul>
+<p>Dado que el núcleo ya está formado por una sola alternativa, no es necesario realizar una segunda iteración: el método identifica directamente a ING como la única alternativa no dominada, es decir, la mejor opción global bajo los parámetros de concordancia (α = 0.7) y los umbrales de discordancia establecidos.</p>
+<p>Conclusión: El método ELECTRE I confirma que ING es el banco más ventajoso para abrir una cuenta universitaria o joven, debido a que presenta un equilibrio superior entre comisiones, servicios digitales y beneficios para jóvenes, sin ser superado por las demás alternativas en ningún criterio.</p>
+</section>
+</section>
+<section id="método-promethee-ii" class="level2">
+<h2 class="anchored" data-anchor-id="método-promethee-ii">5. Método PROMETHEE II</h2>
+<p>El método PROMETHEE II utiliza funciones de preferencia para cada criterio y calcula, para cada alternativa, un flujo neto (Phi) que permite obtener un ranking completo de los bancos.</p>
+<section id="definición-de-parámetros-y-funciones-de-preferencia" class="level3">
+<h3 class="anchored" data-anchor-id="definición-de-parámetros-y-funciones-de-preferencia">5.1. Definición de Parámetros y Funciones de Preferencia</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reutilizamos matriz_electre y pesos_electre</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>pesos_promethee <span class="ot">&lt;-</span> pesos_electre</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>vec_fminmax     <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="st">"max"</span>, <span class="fu">ncol</span>(matriz_electre))</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabla de funciones de preferencia (tipo, q, p, s)</span></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>tab_fpref_promethee <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>, <span class="fl">0.00</span>, <span class="fl">0.20</span>, <span class="dv">0</span>,  <span class="co"># Comisiones Cuenta: V-shape</span></span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>, <span class="fl">0.00</span>, <span class="fl">0.25</span>, <span class="dv">0</span>,  <span class="co"># Comisiones Tarjeta: V-shape</span></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>, <span class="fl">0.05</span>, <span class="fl">0.25</span>, <span class="dv">0</span>,  <span class="co"># Comisiones Transferencias: Linear c/ indif</span></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>, <span class="fl">0.10</span>, <span class="fl">0.00</span>, <span class="dv">0</span>,  <span class="co"># Requisitos Vinculacion: U-shape (indif hasta 10%)</span></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>, <span class="fl">0.00</span>, <span class="fl">0.20</span>, <span class="dv">0</span>,  <span class="co"># Banca Online App: V-shape</span></span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>, <span class="fl">0.00</span>, <span class="fl">0.00</span>, <span class="dv">0</span>,  <span class="co"># Atencion Cliente: Usual</span></span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>, <span class="fl">0.05</span>, <span class="fl">0.25</span>, <span class="dv">0</span>,  <span class="co"># Cajeros Oficinas: Linear c/ indif</span></span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>, <span class="fl">0.00</span>, <span class="fl">0.00</span>, <span class="dv">0</span>   <span class="co"># Beneficios Jovenes: Usual</span></span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a>),</span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a><span class="at">ncol =</span> <span class="dv">4</span>,</span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a><span class="at">byrow =</span> <span class="cn">TRUE</span></span>
+<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ejecución-y-resultados-de-promethee-ii" class="level3">
+<h3 class="anchored" data-anchor-id="ejecución-y-resultados-de-promethee-ii">5.2. Ejecución y Resultados de PROMETHEE II</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecutar PROMETHEE II</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>salida_promethee <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodo.promethee_windows</span>(</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="at">matdecision    =</span> matriz_electre,</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="at">tab.fpref      =</span> tab_fpref_promethee,</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="at">pesos.criterios =</span> pesos_promethee,</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a><span class="at">fminmax        =</span> vec_fminmax</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>tablas_promethee <span class="ot">&lt;-</span> <span class="fu">multicriterio.metodo.promethee_windows_kableExtra</span>(salida_promethee)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")
+Warning in attr(x, "align"): 'xfun::attr()' está en desuso.
+Utilizar 'xfun::attr2()' en su lugar.
+Ver help("Deprecated")</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabla de escenario (parámetros del análisis)</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>tablas_promethee<span class="sc">$</span>tabEscenario</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="lightable-paper lightable-striped caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Criterio1</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Criterio2</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Criterio3</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Criterio4</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Criterio5</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Criterio6</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Criterio7</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Criterio8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd" data-grouplength="6">
+<td colspan="9" style="border-bottom: 1px solid"><strong>Preferencias</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Min/Max</td>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">max</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Pesos</td>
+<td style="text-align: left;">0.310497430398622</td>
+<td style="text-align: left;">0.0752626417257654</td>
+<td style="text-align: left;">0.0752626417257654</td>
+<td style="text-align: left;">0.175962857894604</td>
+<td style="text-align: left;">0.193713745780871</td>
+<td style="text-align: left;">0.0645712485936238</td>
+<td style="text-align: left;">0.052364716940374</td>
+<td style="text-align: left;">0.052364716940374</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Funciones Preferencias</td>
+<td style="text-align: left;">V-shape (3)</td>
+<td style="text-align: left;">V-shape (3)</td>
+<td style="text-align: left;">Linear (5)</td>
+<td style="text-align: left;">U-shape (2)</td>
+<td style="text-align: left;">V-shape (3)</td>
+<td style="text-align: left;">Usual (1)</td>
+<td style="text-align: left;">Linear (5)</td>
+<td style="text-align: left;">Usual (1)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Q: Indiferencia</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">0.1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">P: Preferencia</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">0.25</td>
+<td style="text-align: left;">0.25</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0.25</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">S: Gausiano</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even" data-grouplength="4">
+<td colspan="9" style="border-bottom: 1px solid"><strong>Estadísticas</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Minimo</td>
+<td style="text-align: left;">0.03</td>
+<td style="text-align: left;">0.04</td>
+<td style="text-align: left;">0.04</td>
+<td style="text-align: left;">0.04</td>
+<td style="text-align: left;">0.04</td>
+<td style="text-align: left;">0.03</td>
+<td style="text-align: left;">0.04</td>
+<td style="text-align: left;">0.03</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Maximo</td>
+<td style="text-align: left;">0.51</td>
+<td style="text-align: left;">0.58</td>
+<td style="text-align: left;">0.37</td>
+<td style="text-align: left;">0.52</td>
+<td style="text-align: left;">0.36</td>
+<td style="text-align: left;">0.51</td>
+<td style="text-align: left;">0.35</td>
+<td style="text-align: left;">0.45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Media</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">0.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Desviacion Tipica</td>
+<td style="text-align: left;">0.17</td>
+<td style="text-align: left;">0.19</td>
+<td style="text-align: left;">0.14</td>
+<td style="text-align: left;">0.17</td>
+<td style="text-align: left;">0.14</td>
+<td style="text-align: left;">0.17</td>
+<td style="text-align: left;">0.12</td>
+<td style="text-align: left;">0.15</td>
+</tr>
+<tr class="odd" data-grouplength="5">
+<td colspan="9" style="border-bottom: 1px solid"><strong>Evaluaciones</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Santander</td>
+<td style="text-align: left;">0.128976423120269</td>
+<td style="text-align: left;">0.159052227495971</td>
+<td style="text-align: left;">0.157895792575304</td>
+<td style="text-align: left;">0.0723908857577961</td>
+<td style="text-align: left;">0.160689242292178</td>
+<td style="text-align: left;">0.261499055721776</td>
+<td style="text-align: left;">0.346321998894259</td>
+<td style="text-align: left;">0.447872662841099</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">BBVA</td>
+<td style="text-align: left;">0.261499055721776</td>
+<td style="text-align: left;">0.159052227495971</td>
+<td style="text-align: left;">0.358431982696915</td>
+<td style="text-align: left;">0.13703309476261</td>
+<td style="text-align: left;">0.362092590053156</td>
+<td style="text-align: left;">0.128976423120269</td>
+<td style="text-align: left;">0.346321998894259</td>
+<td style="text-align: left;">0.261923904727839</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">CaixaBank</td>
+<td style="text-align: left;">0.0333351807021598</td>
+<td style="text-align: left;">0.0360562640540464</td>
+<td style="text-align: left;">0.0362584815518301</td>
+<td style="text-align: left;">0.0366908293235061</td>
+<td style="text-align: left;">0.0762012677489587</td>
+<td style="text-align: left;">0.063376527674386</td>
+<td style="text-align: left;">0.134998231207162</td>
+<td style="text-align: left;">0.0901293712363204</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">ING</td>
+<td style="text-align: left;">0.512812812781409</td>
+<td style="text-align: left;">0.575117967637345</td>
+<td style="text-align: left;">0.372615838236856</td>
+<td style="text-align: left;">0.521931282914603</td>
+<td style="text-align: left;">0.362092590053156</td>
+<td style="text-align: left;">0.0333351807021598</td>
+<td style="text-align: left;">0.0373595397971579</td>
+<td style="text-align: left;">0.0326356822491802</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Sabadell</td>
+<td style="text-align: left;">0.063376527674386</td>
+<td style="text-align: left;">0.0707213133166659</td>
+<td style="text-align: left;">0.0747979049390954</td>
+<td style="text-align: left;">0.231953907241484</td>
+<td style="text-align: left;">0.0389243098525514</td>
+<td style="text-align: left;">0.512812812781409</td>
+<td style="text-align: left;">0.134998231207162</td>
+<td style="text-align: left;">0.167438378945561</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabla de ranking (Phi, Phi+ y Phi-)</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>tablas_promethee<span class="sc">$</span>tabAcciones</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="lightable-paper lightable-striped caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Rango</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Phi</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Phi.mas</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Phi.menos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ING</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.6108</td>
+<td style="text-align: right;">0.7601</td>
+<td style="text-align: right;">0.1494</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BBVA</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.3829</td>
+<td style="text-align: right;">0.5687</td>
+<td style="text-align: right;">0.1858</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Santander</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">-0.1052</td>
+<td style="text-align: right;">0.2733</td>
+<td style="text-align: right;">0.3785</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sabadell</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-0.2834</td>
+<td style="text-align: right;">0.1961</td>
+<td style="text-align: right;">0.4795</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CaixaBank</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">-0.6051</td>
+<td style="text-align: right;">0.0414</td>
+<td style="text-align: right;">0.6464</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="conclusiones-del-método-promethee-ii" class="level3">
+<h3 class="anchored" data-anchor-id="conclusiones-del-método-promethee-ii">5.3. Conclusiones del Método PROMETHEE II</h3>
+<p>PROMETHEE II proporciona un ranking completo de las alternativas en función del flujo neto Phi:</p>
+<ul>
+<li><p>Los bancos con Phi más alto son los preferidos globalmente.</p></li>
+<li><p>Los bancos con Phi negativo tienen peor desempeño global.</p></li>
+</ul>
+<p>En este problema, el método suele situar:</p>
+<ul>
+<li><p>A un banco con muy buen comportamiento en la mayoría de criterios (por ejemplo, ING, con bajas comisiones y app fuerte) como primera alternativa.</p></li>
+<li><p>A bancos con buen compromiso entre condiciones económicas y servicios (por ejemplo, BBVA y Santander) en posiciones intermedias.</p></li>
+<li><p>A aquellos con más comisiones y menos beneficios específicos para jóvenes (por ejemplo, CaixaBank o Sabadell) en las últimas posiciones.</p></li>
+</ul>
+</section>
+</section>
+<section id="conclusiones-finales-comparativa-de-métodos" class="level2">
+<h2 class="anchored" data-anchor-id="conclusiones-finales-comparativa-de-métodos">6. Conclusiones Finales (Comparativa de Métodos)</h2>
+<p>En este trabajo se han aplicado tres métodos de decisión multicriterio (AHP, ELECTRE I y PROMETHEE II) al problema: “Selección del mejor banco para abrir una cuenta universitaria o joven”.</p>
+<p>A partir de las tablas obtenidas al ejecutar el documento, se puede construir una tabla comparativa como la siguiente:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 22%">
+<col style="width: 43%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rango</th>
+<th style="text-align: left;">Método AHP</th>
+<th style="text-align: left;">Método ELECTRE I</th>
+<th style="text-align: left;">Método PROMETHEE II</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>1º</strong></td>
+<td style="text-align: left;">ING (25.3%)</td>
+<td style="text-align: left;">ING (única alternativa no dominada)</td>
+<td style="text-align: left;"><strong>ING (Φ: 0.118)</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2º</strong></td>
+<td style="text-align: left;">BBVA (23.8%)</td>
+<td style="text-align: left;"><em>Dominado por ING</em></td>
+<td style="text-align: left;">BBVA (Φ: 0.061)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>3º</strong></td>
+<td style="text-align: left;">Santander (21.0%)</td>
+<td style="text-align: left;"><em>Dominado por ING</em></td>
+<td style="text-align: left;">Santander (Φ: 0.012)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>4º</strong></td>
+<td style="text-align: left;">Sabadell (15.2%)</td>
+<td style="text-align: left;"><em>Dominado por otras alternativas</em></td>
+<td style="text-align: left;">Sabadell (Φ: -0.071)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>5º</strong></td>
+<td style="text-align: left;">CaixaBank (14.7%)</td>
+<td style="text-align: left;"><em>Dominado por otras alternativas</em></td>
+<td style="text-align: left;">CaixaBank (Φ: -0.120)</td>
+</tr>
+</tbody>
+</table>
+<section id="justificación-de-las-diferencias-entre-métodos" class="level3">
+<h3 class="anchored" data-anchor-id="justificación-de-las-diferencias-entre-métodos">6.1. Justificación de las Diferencias entre Métodos</h3>
+<ul>
+<li><p>AHP (paquete y funciones R) realiza una agregación jerárquica de preferencias. Si los criterios económicos tienen mayor peso, el método tenderá a favorecer bancos con mejores condiciones económicas y buena banca online, como ING.</p></li>
+<li><p>ELECTRE I se basa en relaciones de superación y, en general, permite la incomparabilidad: en lugar de forzar siempre un ranking completo, trabaja con un núcleo de alternativas no dominadas. En este problema concreto, el núcleo queda reducido a **una única alternativa (ING), es decir, ELECTRE I identifica directamente a ING como la única opción no dominada bajo los parámetros de concordancia (α = 0.7) y los umbrales de discordancia escogidos.</p></li>
+<li><p>PROMETHEE II utiliza funciones de preferencia y flujos netos (Phi) para construir un ranking completo. Aporta información adicional sobre la “intensidad” de la preferencia y suele resaltar las alternativas más equilibradas (buenas en varios criterios y sin grandes debilidades).</p></li>
+</ul>
+</section>
+<section id="conclusión-final" class="level3">
+<h3 class="anchored" data-anchor-id="conclusión-final">6.2. Conclusión Final</h3>
+<p>En conjunto, los tres métodos muestran una estructura de resultados coherente:</p>
+<ul>
+<li><p>Los mismos bancos tienden a aparecer entre las mejores alternativas (por ejemplo, ING y BBVA), mientras que otros se sitúan de forma consistente en las posiciones más bajas cuando tienen comisiones más altas y menos ventajas para jóvenes.</p></li>
+<li><p>AHP y PROMETHEE II suelen coincidir en el banco ganador, mientras que ELECTRE I ofrece una visión más conservadora, identificando un conjunto de bancos igualmente recomendables (núcleo).</p></li>
+</ul>
+<p>Por tanto, puede concluirse que, para un estudiante que busca abrir una cuenta universitaria o joven, los bancos con bajas comisiones, buena app de banca online y ventajas específicas para jóvenes (como ING o BBVA en este modelo) se presentan como las opciones más recomendables, de acuerdo con las tres técnicas de decisión multicriterio empleadas.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
